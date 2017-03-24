@@ -23,5 +23,11 @@ public void all_returnsAllInstancesOfMember_true(){
   assertEquals(true, Member.all().contains(firstMember));
   assertEquals(true, Member.all().contains(secondMember));
 }
+@Test
+public void clear_emptiesAllMembersFromArrayList_0(){
+  Member newMember = new Member("name");
+  Member.clear();
+  assertEquals(0, Member.all().size());
+}
 
 }

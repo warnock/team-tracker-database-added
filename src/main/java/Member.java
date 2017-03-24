@@ -17,4 +17,8 @@ public class Member {
   public static List<Member> all() {
     return instances;
   }
+
+  public static void clear(){
+    
+  }
 }
