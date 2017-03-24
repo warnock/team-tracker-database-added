@@ -15,6 +15,6 @@ public class Member {
   }
 
   public static List<Member> all() {
-    return null;
+    return instances;
   }
 }
