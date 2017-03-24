@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Team {
   private String mName;
-  private List<Team> instances = new ArrayList<Team>();
+  private static List<Team> instances = new ArrayList<Team>();
 
   public Team(String name){
     mName = name;
@@ -15,6 +15,6 @@ public class Team {
   }
 
   public static List<Team> all() {
-    return null;
+    return instances;
   }
 }
