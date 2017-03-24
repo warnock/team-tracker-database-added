@@ -37,4 +37,8 @@ public class Team {
   public List<Member> getMembers() {
     return myMembers;
   }
+
+  public void addMembers(Member member) {
+    // myMembers.add(member);
+  }
 }

@@ -50,4 +50,13 @@ public class TeamTest {
     Team newTeam = new Team("name");
     assertEquals(0, newTeam.getMembers().size());
   }
+
+  @Test
+  public void addMembers_addMembersToList_true() {
+    Team.clear();
+    Team newTeam = new Team("name");
+    Member newMember = new Member("name");
+    newTeam.addMembers(newMember);
+    assertTrue(newTeam.getMembers().contains(newMember));
+  }
 }
