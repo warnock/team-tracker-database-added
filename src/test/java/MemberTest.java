@@ -30,4 +30,11 @@ public void clear_emptiesAllMembersFromArrayList_0(){
   assertEquals(0, Member.all().size());
 }
 
+@Test
+public void getId_MemberInstantiatesWithId_1(){
+Member.clear();
+Member newMember = new Member("name");
+assertEquals(1, newMember.getId());
+}
+
 }
