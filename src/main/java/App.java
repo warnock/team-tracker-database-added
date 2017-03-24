@@ -48,5 +48,18 @@ public class App {
       model.put("template", "templates/newMember-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    post("/teams/:cityId/members/new", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Team team = Team.find(Integer.parseInt(request.params(":cityId")));
+
+      String memberName = request.queryParams("memberName");
+
+      Member member = new Member(memberName);
+      team.addMembers(member);
+      model.put("team", team);
+      model.put("template", "templates/team.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
