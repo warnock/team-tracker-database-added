@@ -29,4 +29,11 @@ public class TeamTest {
     assertEquals(0, Team.all().size());
   }
 
+  @Test
+  public void getId_TeamInstantiatesWithId_1() {
+    Team.clear();
+    Team newTeam = new Team("name");
+    assertEquals(1, newTeam.getId());
+  }
+
 }
