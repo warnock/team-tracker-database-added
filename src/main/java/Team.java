@@ -29,6 +29,6 @@ public class Team {
   }
 
   public static Team find(int id) {
-    return null;
+    return instances.get(id - 1);
   }
 }
