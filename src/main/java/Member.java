@@ -4,10 +4,12 @@ import java.util.List;
 public class Member {
   private String mName;
   private static List<Member> instances = new ArrayList<Member>();
+  private int mId;
 
   public Member(String name) {
     mName = name;
     instances.add(this);
+    mId = instances.size();
   }
 
   public String getName(){
@@ -22,6 +24,6 @@ public class Member {
     instances.clear();
   }
   public int getId(){
-    return 0;
+    return mId;
   }
 }
