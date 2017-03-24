@@ -27,4 +27,8 @@ public class Team {
   public int getId(){
     return mId;
   }
+
+  public static Team find(int id) {
+    return null;
+  }
 }
