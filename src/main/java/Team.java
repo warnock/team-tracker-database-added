@@ -4,4 +4,8 @@ public class Team {
   public Team(String name){
     mName = name;
   }
+
+  public String getName() {
+    return "";
+  }
 }

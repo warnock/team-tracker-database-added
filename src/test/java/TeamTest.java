@@ -9,5 +9,10 @@ public class TeamTest {
     assertEquals(true, newTeam instanceof Team);
   }
 
+  @Test
+  public void getName_getsNameValue_name() {
+    Team newTeam = new Team("name");
+    assertEquals("name", newTeam.getName());
+  }
 
 }
