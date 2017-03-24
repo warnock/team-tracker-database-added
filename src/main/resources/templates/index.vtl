@@ -1,0 +1,13 @@
+<!-- index.vtl -->
+<h1>Hackfest Northwest</h1>
+<p>Get ready to put your skills to the test at <em>Hackfest Northwest!</em></p>
+<p>This year, like last, we will be building amazing technology in groups and competing for the Hackfest Northwest trophy!</p>
+<p>Join a team below or enter your own team to compete!<a href="teams/new"> Register a new Team</a></p>
+<h2>Current Teams:</h2>
+<ul>
+  #foreach ($team in $teams)
+    <li><a href ="teams/$team.getId()/">$team.getName()</a></li>
+  #end
+</ul>
+
+<!-- index.vtl -->
