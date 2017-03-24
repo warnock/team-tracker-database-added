@@ -1,5 +1,3 @@
-
-
 public class Member {
   private String mName;
 
@@ -7,4 +5,7 @@ public class Member {
     mName = name;
   }
 
+  public String getName(){
+    return "";
+  }
 }

@@ -10,5 +10,11 @@ public void Member_instantiatesCorrectly_true() {
   assertEquals(true, newMember instanceof Member);
 }
 
+@Test
+public void getName_getsNameValue_name() {
+  Member newMember = new Member("name");
+  assertEquals("name", newMember.getName());
+}
+
 
 }
