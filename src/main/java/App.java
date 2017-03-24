@@ -23,5 +23,14 @@ public class App {
       model.put("template", "templates/newTeam-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
+
+    post("/teams", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String teamName = request.queryParams("teamName");
+      Team newTeam = new Team(teamName);
+      model.put("teams", Team.all());
+      model.put("template", "templates/index.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 }
