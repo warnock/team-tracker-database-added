@@ -16,5 +16,12 @@ public void getName_getsNameValue_name() {
   assertEquals("name", newMember.getName());
 }
 
+@Test
+public void all_returnsAllInstancesOfMember_true(){
+  Member firstMember = new Member("name");
+  Member secondMember = new Member("name");
+  assertEquals(true, Member.all().contains(firstMember));
+  assertEquals(true, Member.all().contains(secondMember));
+}
 
 }
