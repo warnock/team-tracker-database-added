@@ -35,6 +35,6 @@ public class Team {
   }
 
   public List<Member> getMembers() {
-    return null;
+    return myMembers;
   }
 }
