@@ -26,4 +26,8 @@ public class Member {
   public int getId(){
     return mId;
   }
+
+  public static Member find(int id){
+    return null;
+  }
 }

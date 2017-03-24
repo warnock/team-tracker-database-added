@@ -37,4 +37,11 @@ Member newMember = new Member("name");
 assertEquals(1, newMember.getId());
 }
 
+@Test
+public void find_returnsMembersWithTheSameId_secondMember() {
+  Member.clear();
+  Member firstMember = new Member("name");
+  Member secondMember = new Member("name");
+  assertEquals(secondMember, Member.find(secondMember.getId()));
+}
 }
