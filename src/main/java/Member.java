@@ -28,6 +28,6 @@ public class Member {
   }
 
   public static Member find(int id){
-    return null;
+    return instances.get(id - 1);
   }
 }
