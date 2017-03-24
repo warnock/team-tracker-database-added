@@ -15,4 +15,12 @@ public class TeamTest {
     assertEquals("name", newTeam.getName());
   }
 
+  @Test
+  public void all_getsAllTeams_true() {
+    Team firstTeam = new Team("name");
+    Team secondTeam = new Team("name");
+    assertEquals(true, Team.all().contains(firstTeam));
+    assertEquals(true, Team.all().contains(secondTeam));
+  }
+
 }
