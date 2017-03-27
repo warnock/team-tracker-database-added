@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MemberTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2017-03-27T18:18:21" hostname="Epicodus-6C.local" time="0.219">
+<testsuite name="MemberTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-03-27T21:30:32" hostname="Epicodus-6C.local" time="0.226">
   <properties/>
-  <testcase name="all_returnsAllInstancesOfMember_true" classname="MemberTest" time="0.138"/>
-  <testcase name="clear_emptiesAllMembersFromArrayList_0" classname="MemberTest" time="0.008"/>
-  <testcase name="equals_returnsTrueIfNameAretheSame" classname="MemberTest" time="0.004"/>
-  <testcase name="save_returnsTrueIfNameAretheSame" classname="MemberTest" time="0.014"/>
-  <testcase name="Member_instantiatesCorrectly_true" classname="MemberTest" time="0.006"/>
+  <testcase name="all_returnsAllInstancesOfMember_true" classname="MemberTest" time="0.126"/>
+  <testcase name="save_savesTeamIdIntoDB_true" classname="MemberTest" time="0.022"/>
+  <testcase name="clear_emptiesAllMembersFromArrayList_0" classname="MemberTest" time="0.009"/>
+  <testcase name="equals_returnsTrueIfNameAretheSame" classname="MemberTest" time="0.005"/>
+  <testcase name="save_returnsTrueIfNameAretheSame" classname="MemberTest" time="0.013"/>
+  <testcase name="Member_instantiatesCorrectly_true" classname="MemberTest" time="0.005"/>
   <testcase name="find_returnsMembersWithTheSameId_secondMember" classname="MemberTest" time="0.019"/>
   <testcase name="getId_MemberInstantiatesWithId_1" classname="MemberTest" time="0.009"/>
   <testcase name="save_assignsIdToObject" classname="MemberTest" time="0.014"/>

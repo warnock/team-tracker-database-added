@@ -6,9 +6,15 @@ import org.sql2o.*;
 public class Member {
   private String name;
   private int id;
+  private int teamId;
 
-  public Member(String name) {
+  public Member(String name, int teamId) {
     this.name = name;
+    this.teamId = teamId;
+  }
+
+  public int getTeamId() {
+    return teamId;
   }
 
   public String getName(){
@@ -16,7 +22,7 @@ public class Member {
   }
 
   public static List<Member> all() {
-    String sql = "SELECT id, name FROM members";
+    String sql = "SELECT id, name, teamId FROM members";
     try (Connection con = DB.sql2o.open()){
       return con.createQuery(sql).executeAndFetch(Member.class);
     }
@@ -28,7 +34,7 @@ public class Member {
       return false;
     } else {
       Member newMember = (Member) otherMember;
-      return this.getName().equals(newMember.getName()) && this.getId() == newMember.getId();
+      return this.getName().equals(newMember.getName()) && this.getId() == newMember.getId() && this.getTeamId() == newMember.getTeamId();
     }
   }
   public int getId(){
@@ -48,9 +54,10 @@ public class Member {
 
   public void save (){
     try(Connection con = DB.sql2o.open()){
-      String sql = "INSERT INTO members (name) VALUES (:name)";
+      String sql = "INSERT INTO members (name, teamid) VALUES (:name, :teamid)";
       this.id = (int) con.createQuery(sql, true)
       .addParameter("name", this.name) //"name" needs to match (:name) above.
+      .addParameter("teamid", this.teamId)
       .executeUpdate()
       .getKey();
     }
